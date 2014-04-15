@@ -1,0 +1,65 @@
+
+<script>
+
+
+
+
+
+
+
+function onSuccess(imageData) {
+    var image = document.getElementById('myImage');
+    image.src = "data:image/jpeg;base64," + imageData;
+    alert('Camera Plugin Success!')
+}
+
+
+
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+
+
+<input type=button value="load" style="font-size:25px;" onclick="{
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL});
+}">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
