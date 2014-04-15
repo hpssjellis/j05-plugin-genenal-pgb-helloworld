@@ -38,7 +38,7 @@ Image Data:<img  id="myImage2"   style="display:block; width:500px; height:400px
   navigator.camera.getPicture(    
      function (imageData) {
          alert('photo data success')   
-         document.getElementById('myImage2').src =  "data:image/jpeg;base64," + imageData;
+         document.getElementById('myImage2').src =  'data:image/jpeg;base64,' + imageData;
      }, onCameraError, { quality: 50, allowEdit: true, destinationType: Camera.DestinationType.DATA_URL});
  
   
