@@ -3,9 +3,7 @@
 <head>
 
 <script type="text/javascript" charset="utf-8" src="phonegap.js">
-   
    // strangely this line is very important for plugins
-   
 </script>
 
 
@@ -30,9 +28,9 @@
       
       function (error) {
          alert('code: '    + error.code    + '\n' +  'message: ' + error.message + '\n');
-      },
+      }
       
-      );} 
+      );
             
         
         
@@ -46,21 +44,6 @@
 
 
 
-
-
-
-  navigator.camera.getPicture(    
-     function (imageData) {
-         alert('photo data success')   
-         document.getElementById('myImage2').src =  'data:image/jpeg;base64,' + imageData;
-     }, 
-     function (message) {
-        alert('Failed because: ' + message)
-     }, 
-     { quality: 50, allowEdit: true, destinationType: Camera.DestinationType.DATA_URL});
- 
-  
-}">
 
 
 
