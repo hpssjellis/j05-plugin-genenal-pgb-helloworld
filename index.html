@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+
+   
+
+    function onCameraError(message) {
+        alert('Failed because: ' + message)
+    }
+    
+    
+
+
+
+    
+
+
+
+</script>
+</head>
+<body>
+<font style="font-size:30px">  Test2
+
+Image Data:<img  id="myImage2"   style="display:block; width:500px; height:400px;" src="" /><br>
+
+   
+
+
+
+   
+
+<input type=button value="Picture As Data" style="font-size:30px" onclick="{
+
+  navigator.camera.getPicture(    
+     function (imageData) {
+         alert('photo data success')   
+         document.getElementById('myImage2').src =  "data:image/jpeg;base64," + imageData;
+     }, onCameraError, { quality: 50, allowEdit: true, destinationType: Camera.DestinationType.DATA_URL});
+ 
+  
+}">
+
+    
+       
+</font>
+</body>
+</html>
+
+
+
+
+
+
+
+   
