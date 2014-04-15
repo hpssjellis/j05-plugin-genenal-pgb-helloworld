@@ -16,12 +16,11 @@
 
 
 
-
+<input type=text id="mySrc" value="http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3">
 <input type=button value="Try loading a song" style="font-size:30px" onclick="{
 
-
-
-   my_media = new Media('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3', 
+   my_media = new Media(document.getElementById('mySrc').value, 
+   
       function () {
          alert('Media plugin success')   
       }, 
@@ -32,13 +31,15 @@
       
       );
             
-        
-        
       my_media.play();
-
 
 }">
 
+<input type=button value="Stop" style="font-size:30px" onclick="{
+   
+    my_media.stop();
+
+}">
 
 
 
