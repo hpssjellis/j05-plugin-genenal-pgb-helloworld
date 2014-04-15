@@ -2,15 +2,11 @@
 <html>
 <head>
 
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
 
 
-
-    
-    
-
-<script>
-
-
+   
 
     function onCameraError(message) {
         alert('Failed because: ' + message)
@@ -21,8 +17,7 @@
     function onDataSuccess(imageData) {
      alert('photo data success')   
      document.getElementById('myImage2').src =  "data:image/jpeg;base64," + imageData;
-    // var image = document.getElementById('myImage1');
-    // image.src = imageURI;
+
 
       
     }
@@ -36,7 +31,6 @@
 </head>
 <body>
 <font style="font-size:30px">  
-
 
 Image Data:<img  id="myImage2"   style="display:block; width:500px; height:400px;" src="" /><br>
 
@@ -61,3 +55,8 @@ Image Data:<img  id="myImage2"   style="display:block; width:500px; height:400px
 
 
 
+
+
+
+
+   
