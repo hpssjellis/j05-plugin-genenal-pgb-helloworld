@@ -2,28 +2,18 @@
 <html>
 <head>
 
-<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-<script type="text/javascript" charset="utf-8">
-
-
+<script type="text/javascript" charset="utf-8" src="phonegap.js">
    
-
-    function onCameraError(message) {
-        alert('Failed because: ' + message)
-    }
-    
-    
-
-
-
-    
-
-
-
+   // strangely this line is very important for plugins
+   
 </script>
+
+
+
 </head>
 <body>
-<font style="font-size:30px">  Test2
+<h1 align=center>Plugin testing using jQuery style functions</h1>
+<font style="font-size:30px">  
 
 Image Data:<img  id="myImage2"   style="display:block; width:500px; height:400px;" src="" /><br>
 
@@ -39,7 +29,11 @@ Image Data:<img  id="myImage2"   style="display:block; width:500px; height:400px
      function (imageData) {
          alert('photo data success')   
          document.getElementById('myImage2').src =  'data:image/jpeg;base64,' + imageData;
-     }, onCameraError, { quality: 50, allowEdit: true, destinationType: Camera.DestinationType.DATA_URL});
+     }, 
+     function (message) {
+        alert('Failed because: ' + message)
+     }, 
+     { quality: 50, allowEdit: true, destinationType: Camera.DestinationType.DATA_URL});
  
   
 }">
