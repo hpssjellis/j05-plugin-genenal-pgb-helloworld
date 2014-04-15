@@ -16,6 +16,50 @@
 
 
 
+<h2>Lets try Trice low-latency-polyphonic-audio-in-phonegap</h2>
+
+
+<input type=text id="mySrc2" value="android_asset/www/Kalimba.mp3">
+<input type=button value="Pre-Load Audio" style="font-size:30px" onclick="{
+   PGLowLatencyAudio.preloadAudio('background', document.getElementById('mySrc2').value, 1)
+}">
+
+<input type=button value="Play" style="font-size:30px" onclick="{
+   PGLowLatencyAudio.play('background');
+}">
+
+<input type=button value="stop" style="font-size:30px" onclick="{
+   PGLowLatencyAudio.stop('background');
+}">
+<br><br>
+
+
+<input type=text id="mySrc3" value="android_asset/www/Kalimba.mp3">
+<input type=button value="Pre-LoadFX" style="font-size:30px" onclick="{
+   PGLowLatencyAudio.preloadFX('explosion', document.getElementById('mySrc3').value);
+}">
+
+<input type=button value="Play" style="font-size:30px" onclick="{
+   PGLowLatencyAudio.play('explosion');
+}">
+
+<input type=button value="stop" style="font-size:30px" onclick="{
+   PGLowLatencyAudio.stop('explosion');
+}">
+
+
+
+
+
+
+
+
+
+
+<h2></h2> Media seems to work</h2>
+
+
+
 <input type=text id="mySrc" value="http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3">
 <input type=button value="Try loading a song" style="font-size:30px" onclick="{
 
